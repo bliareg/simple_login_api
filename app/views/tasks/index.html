@@ -3,7 +3,7 @@
     <title>Task</title>
     <body>
       <div>
-        <h3>Implement login/registraion action on react using rails api</h3>
+        <h3>Implement login/registration actions on react using rails api</h3>
         <p>
           <h4><b>1.</b>init tools.</h4>
           <p>
@@ -32,9 +32,20 @@
               </li>
             </ul>
           </p>
-          <h4><b>2.</b>project</h4>
+          <h4><b>3.</b>project</h4>
           <p>
-            Source code апішки <a href="https://github.com/bliareg/simple_login_api">тут</a>, можеш скачати і запустити, або використовувати прямо звідси - 
+            Апішку для логінізації можеш використовувати прямо із цього <a href="https://simple-login-api.herokuapp.com/">сайту</a> де ти читаєш цей туторіал, або скачати і запустити <a href="https://github.com/bliareg/simple_login_api">звідси</a>.<br>
+            <br>Усі доступні роути до апішки <a href="/apipie">тут</a>.<br>
+            <br>
+            Необхідно зробити логінізацію по токену, це відбувається так -
+            <ol>
+              <li>Користувач кидає запит на сервер для логінізації - в даному випадку на <a href="/apipie/1.0/sessions/create.html">цей роут</a> </li>
+              <li>Сервер повертає токен, який ти зберігаєш</li>
+              <li>Кожен наступний запит токен у хедері запиту кидається на сервер звідки у хедері він повертається і його знову потрібно записати на фронтенді.</li>
+              <li>Токен записується у хедер <code>Authorization</code>, так: <br>
+                <code>Token token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE0OTM3MDg3MTR9.youU7Do6JCCzQMcEMOTEAzrFalPQ_xfQ97Ygnx1M3NE"</code></li>
+              <li>Почитай що таке хедери у http</li>
+            </ol>
           </p>
         </p>
       </div>
